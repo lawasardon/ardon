@@ -7,6 +7,7 @@ package guiapp;
 
 import java.awt.Color;
 import internalPage.*;
+import internalPage.dashBoardPage;
 /**
  *
  * @author SCC-COMLAB
@@ -20,8 +21,8 @@ public class dashBoard extends javax.swing.JFrame {
         initComponents();
     }
     Color navcolor = new Color(153,153,153);
-    Color headcolor = new Color(51,153,255);
-    Color bodycolor = new Color(0,51,255);
+    Color headcolor = new Color(0,153,153);
+    Color bodycolor = new Color(0,204,204);
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,6 +53,9 @@ public class dashBoard extends javax.swing.JFrame {
 
         dashpane.setBackground(new java.awt.Color(153, 153, 153));
         dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dashpaneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 dashpaneMouseEntered(evt);
             }
@@ -74,7 +78,7 @@ public class dashBoard extends javax.swing.JFrame {
         });
         dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, 50));
+        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 180, 50));
 
         userpane.setBackground(new java.awt.Color(153, 153, 153));
         userpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,7 +107,7 @@ public class dashBoard extends javax.swing.JFrame {
         });
         userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 180, 50));
+        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 180, 50));
 
         reportspane.setBackground(new java.awt.Color(153, 153, 153));
         reportspane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,7 +122,7 @@ public class dashBoard extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("REPORT");
+        jLabel3.setText("REPORTS");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel3MouseEntered(evt);
@@ -129,12 +133,12 @@ public class dashBoard extends javax.swing.JFrame {
         });
         reportspane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 180, 50));
+        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 180, 50));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 180, 540);
 
-        header.setBackground(new java.awt.Color(51, 153, 255));
+        header.setBackground(new java.awt.Color(0, 204, 204));
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
@@ -150,7 +154,7 @@ public class dashBoard extends javax.swing.JFrame {
         jPanel1.add(header);
         header.setBounds(180, 0, 680, 40);
 
-        maindesktop.setBackground(new java.awt.Color(0, 51, 255));
+        maindesktop.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
         maindesktop.setLayout(maindesktopLayout);
@@ -233,6 +237,11 @@ public class dashBoard extends javax.swing.JFrame {
         userPage up = new userPage();
         maindesktop.add(up).setVisible(true);
     }//GEN-LAST:event_userpaneMouseClicked
+
+    private void dashpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseClicked
+    dashBoardPage dbp = new dashBoardPage();
+    maindesktop.add(dbp).setVisible(true);
+    }//GEN-LAST:event_dashpaneMouseClicked
 
     /**
      * @param args the command line arguments
