@@ -55,7 +55,7 @@ public class dashBoard extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         navbar.setBackground(new java.awt.Color(153, 153, 153));
-        navbar.setLayout(null);
+        navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dashpane.setBackground(new java.awt.Color(153, 153, 153));
         dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -75,9 +75,6 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("DASHBOARD");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel1MouseEntered(evt);
             }
@@ -85,10 +82,9 @@ public class dashBoard extends javax.swing.JFrame {
                 jLabel1MouseExited(evt);
             }
         });
-        dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 180, 60));
+        dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(dashpane);
-        dashpane.setBounds(0, 190, 180, 50);
+        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 180, 50));
 
         userpane.setBackground(new java.awt.Color(153, 153, 153));
         userpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,10 +111,9 @@ public class dashBoard extends javax.swing.JFrame {
                 jLabel2MouseExited(evt);
             }
         });
-        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 180, 60));
+        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(userpane);
-        userpane.setBounds(0, 270, 180, 50);
+        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 50));
 
         reportspane.setBackground(new java.awt.Color(153, 153, 153));
         reportspane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -144,13 +139,11 @@ public class dashBoard extends javax.swing.JFrame {
         });
         reportspane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(reportspane);
-        reportspane.setBounds(0, 350, 180, 50);
+        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 180, 50));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/logo.png"))); // NOI18N
-        navbar.add(jLabel4);
-        jLabel4.setBounds(0, 20, 180, 120);
+        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 180, 120));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 180, 540);
@@ -258,7 +251,7 @@ public class dashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
-          jLabel1.setBackground(bodycolor);
+      
     }//GEN-LAST:event_jLabel1MouseEntered
 
     private void dashpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseExited
@@ -315,10 +308,6 @@ public class dashBoard extends javax.swing.JFrame {
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
 setState(ICONIFIED); 
     }//GEN-LAST:event_jLabel5MouseClicked
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        
-    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
