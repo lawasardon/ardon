@@ -193,10 +193,15 @@ Color navcolor = new Color(153,153,153);
     }//GEN-LAST:event_settingsMouseExited
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-   
+dashBoard db=new dashBoard();
+    
+        this.toBack(); 
+        setVisible(false);
+        new dashBoard().toFront();
+        new dashBoard().setState(java.awt.Frame.NORMAL);
+        db.toFront();   
   
-    dashBoard db = new dashBoard();
-    db.setVisible(true);
+    
     }//GEN-LAST:event_jLabel4MouseClicked
 
 

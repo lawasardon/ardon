@@ -45,6 +45,8 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         maindesktop = new javax.swing.JDesktopPane();
+        jLabel7 = new javax.swing.JLabel();
+        building = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -53,7 +55,7 @@ public class dashBoard extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         navbar.setBackground(new java.awt.Color(153, 153, 153));
-        navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        navbar.setLayout(null);
 
         dashpane.setBackground(new java.awt.Color(153, 153, 153));
         dashpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,6 +75,9 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("DASHBOARD");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel1MouseEntered(evt);
             }
@@ -80,9 +85,10 @@ public class dashBoard extends javax.swing.JFrame {
                 jLabel1MouseExited(evt);
             }
         });
-        dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
+        dashpane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 180, 60));
 
-        navbar.add(dashpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 180, 50));
+        navbar.add(dashpane);
+        dashpane.setBounds(0, 190, 180, 50);
 
         userpane.setBackground(new java.awt.Color(153, 153, 153));
         userpane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -109,9 +115,10 @@ public class dashBoard extends javax.swing.JFrame {
                 jLabel2MouseExited(evt);
             }
         });
-        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
+        userpane.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 180, 60));
 
-        navbar.add(userpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 180, 50));
+        navbar.add(userpane);
+        userpane.setBounds(0, 270, 180, 50);
 
         reportspane.setBackground(new java.awt.Color(153, 153, 153));
         reportspane.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -137,11 +144,13 @@ public class dashBoard extends javax.swing.JFrame {
         });
         reportspane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 160, -1));
 
-        navbar.add(reportspane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 180, 50));
+        navbar.add(reportspane);
+        reportspane.setBounds(0, 350, 180, 50);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/logo-removebg-preview.png"))); // NOI18N
-        navbar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 180, 120));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/logo.png"))); // NOI18N
+        navbar.add(jLabel4);
+        jLabel4.setBounds(0, 20, 180, 120);
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 180, 540);
@@ -192,15 +201,34 @@ public class dashBoard extends javax.swing.JFrame {
 
         maindesktop.setBackground(new java.awt.Color(0, 153, 153));
 
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("STUDENT'S ATTENDANCE");
+
+        building.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        building.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/building1.png"))); // NOI18N
+
+        maindesktop.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        maindesktop.setLayer(building, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout maindesktopLayout = new javax.swing.GroupLayout(maindesktop);
         maindesktop.setLayout(maindesktopLayout);
         maindesktopLayout.setHorizontalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGroup(maindesktopLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(maindesktopLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(building, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         maindesktopLayout.setVerticalGroup(
             maindesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(maindesktopLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(building, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel1.add(maindesktop);
@@ -230,7 +258,7 @@ public class dashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
-    
+          jLabel1.setBackground(bodycolor);
     }//GEN-LAST:event_jLabel1MouseEntered
 
     private void dashpaneMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashpaneMouseExited
@@ -288,6 +316,10 @@ public class dashBoard extends javax.swing.JFrame {
 setState(ICONIFIED); 
     }//GEN-LAST:event_jLabel5MouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -324,6 +356,7 @@ setState(ICONIFIED);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel building;
     private javax.swing.JPanel dashpane;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
@@ -332,6 +365,7 @@ setState(ICONIFIED);
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane maindesktop;
     private javax.swing.JPanel navbar;
