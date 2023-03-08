@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package internalPage;
-import guiapp.loginForm;
+import guiapp.*;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -71,13 +71,13 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("USER NAME");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 110, -1));
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 110, -1));
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(410, 0, 180, 170);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel1.setText("ACCOYNT SETTINGS");
+        jLabel1.setText("ACCOUNT SETTINGS");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(20, 0, 320, 50);
 
