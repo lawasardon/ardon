@@ -72,11 +72,11 @@ public class loginForm extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/studenut-removebg-preview.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, -1, 150));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/attnd.png"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, 120));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/student1.jpeg"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 270, 330));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconsFolder/astudent1.png"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 560));
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 480, 533);
